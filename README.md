@@ -1,3 +1,5 @@
+This is a fork that has translated buttons.
+
 # Vue PhotoSwipe  
 
 ![npm](https://img.shields.io/npm/l/express.svg)
