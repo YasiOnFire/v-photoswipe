@@ -2,7 +2,7 @@ var path = require('path')
 var webpack = require('webpack')
 var pkg = require('./package.json')
 
-function resolve (dir) {
+function resolve(dir) {
   return path.join(__dirname, dir)
 }
 
@@ -13,14 +13,13 @@ module.exports = {
   },
   output: {
     path: resolve('./dist'),
-    publicPath: '/dist/',
+    publicPath: '/',
     filename: '[name].min.js',
     library: '[name]',
     libraryTarget: 'umd'
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.css$/,
         use: [
           'vue-style-loader',
@@ -30,8 +29,7 @@ module.exports = {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
-          loaders: {
-          }
+          loaders: {}
           // other vue-loader options go here
         }
       },

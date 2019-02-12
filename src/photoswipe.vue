@@ -11,13 +11,13 @@
         <div class='pswp__top-bar'>
           <div class='pswp__counter'/>
           <button class='pswp__button pswp__button--close'
-            title='关闭 (Esc)'/>
+            title='Close (Esc)'/>
           <button class='pswp__button pswp__button--share'
-            title='分享'/>
+            title='Share'/>
           <button class='pswp__button pswp__button--fs'
-            title='全屏切换'/>
+            title='Fullscreen'/>
           <button class='pswp__button pswp__button--zoom'
-            title='放大/缩小'/>
+            title='Zoom'/>
           <div class='pswp__preloader'>
             <div class='pswp__preloader__icn'>
               <div class='pswp__preloader__cut'>
@@ -31,9 +31,10 @@
           <div class='pswp__share-tooltip'/>
         </div>
         <button class='pswp__button pswp__button--arrow--left'
-          title='上一张 (arrow left)'/>
+          title='Previous (arrow left)'
+        />
         <button class='pswp__button pswp__button--arrow--right'
-          title='下一张 (arrow right)'/>
+          title='Next (arrow right)'/>
         <div class='pswp__caption'>
           <div class='pswp__caption__center'/>
         </div>
@@ -69,12 +70,6 @@ export default {
     items: {
       handler: function (val, oldVal) {
         if (this.pswp && this.isOpen) {
-          /* this.pswp.items.length = 0
-          val.forEach((item) => {
-            this.pswp.items.push(item)
-          }) */
-          // this.pswp.items = this.items = val（指向同一个对象）
-          // 所以当props items更新后 this.pswp.items随之自动更新
           this.pswp.invalidateCurrItems()
           this.pswp.updateSize(true)
         }
@@ -117,3 +112,10 @@ export default {
   }
 }
 </script>
+
+<style>
+/* .pswp--svg .pswp__button--arrow--left::before, .pswp--svg .pswp__button--arrow--right::before {
+  background-image: url('default-skin.png') !important;
+} */
+</style>
+

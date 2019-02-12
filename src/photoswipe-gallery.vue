@@ -1,5 +1,5 @@
 <template>
-  <div id={id} class={className}>
+  <div>
     <div class="pswp-thumbnails">
       <a :key="index" :item="item" v-for="(item, index) in items" @click="showPhotoSwipe($event, index)" class="pswp-thumbnail">
         <slot :item="item">
